@@ -7,8 +7,15 @@
 
 import UIKit
 import Combine
+import MBProgressHUD
 
-class SearchTableViewController: UITableViewController {
+class SearchTableViewController: UITableViewController ,UIAnimator  {
+    
+    
+    private enum Mode {
+        case onboarding
+        case search
+    }
     
     private lazy var searchControlller : UISearchController = {
         let sc = UISearchController(searchResultsController: nil)
@@ -20,24 +27,64 @@ class SearchTableViewController: UITableViewController {
         return sc
     }()
     
+    private var searchResults : SearchResults?
     private let apiService = APIService()
+    @Published private var mode = Mode.onboarding
     private var subscriber = Set<AnyCancellable>()
-    
+    @Published private var searchQuery = String()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         setupNavigationBar()
-        performSearch()
+        observeForm()
     }
+    
+    
+    private func observeForm() {
+        $searchQuery
+            .debounce(for: .milliseconds(750), scheduler: RunLoop.main)
+            .sink { completion in
+                switch completion {
+                case .finished:
+                    print("Finished")
+                case .failure(let error):
+                    print(error.localizedDescription)
+                }
+            
+            } receiveValue: { [unowned self] value in
+                self.showLoadingAnimation()
+                print(value)
+                self.performSearch(symbol: value)
+            }
+            .store(in: &subscriber)
+        
+        $mode.sink { _ in
+            
+        } receiveValue: {[unowned self] mode in
+            switch mode{
+            case .search:
+                self.tableView.backgroundView = nil
+                
+            case .onboarding:
+                self.tableView.backgroundView = SearchPlaceHolderView()
+                
+            }
+        }
+        .store(in: &subscriber)
+
+    }
+    
     
     private func setupNavigationBar() {
         navigationItem.searchController = searchControlller
+        navigationItem.title = "Search"
     }
     
-    private func performSearch() {
-        apiService.fetchSymbolsPublisher(keywords: "S&P500")
+    private func performSearch(symbol : String) {
+        apiService.fetchSymbolsPublisher(keywords: symbol)
             .sink { completion in
+                self.hideLoadingAnimation()
                 switch completion {
                 case .failure(let error):
                     print(error.localizedDescription)
@@ -45,7 +92,10 @@ class SearchTableViewController: UITableViewController {
                     break
                 }
             } receiveValue: { searchResults in
+                
                 print(searchResults)
+                self.searchResults = searchResults
+                self.tableView.reloadData()
             }
             .store(in: &subscriber)
 
@@ -53,11 +103,16 @@ class SearchTableViewController: UITableViewController {
     
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return searchResults?.items.count ?? 0
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cellId",for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cellId",for: indexPath) as! SearchTableViewCell
+        if let searchResults = self.searchResults {
+            let searchResult = searchResults.items[indexPath.row]
+            cell.configure(with: searchResult)
+
+        }
         return cell
     }
     
@@ -65,8 +120,14 @@ class SearchTableViewController: UITableViewController {
 
 extension SearchTableViewController : UISearchResultsUpdating , UISearchControllerDelegate{
     func updateSearchResults(for searchController: UISearchController) {
-        
+        guard let searchQuery = searchController.searchBar.text , !searchQuery.isEmpty else {
+            return
+        }
+        self.searchQuery = searchQuery
     }
-    
+    func willPresentSearchController(_ searchController: UISearchController) {
+        self.mode = .search
+
+    }
     
 }
