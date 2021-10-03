@@ -53,7 +53,9 @@ class SearchTableViewController: UITableViewController ,UIAnimator  {
                 }
             
             } receiveValue: { [unowned self] value in
+                guard !value.isEmpty else {return}
                 self.showLoadingAnimation()
+                
                 print(value)
                 self.performSearch(symbol: value)
             }
@@ -114,6 +116,10 @@ class SearchTableViewController: UITableViewController ,UIAnimator  {
 
         }
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "showCalculator", sender: nil)
     }
     
 }
