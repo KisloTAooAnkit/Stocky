@@ -119,9 +119,43 @@ class SearchTableViewController: UITableViewController ,UIAnimator  {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "showCalculator", sender: nil)
+        if let searchResults = searchResults {
+            // why item ? instead of indexPath.row ?
+            let symbol = searchResults.items[indexPath.item].symbol
+            let searchRes = searchResults.items[indexPath.item]
+            handleSelection(for: symbol,searchResult: searchRes)
+        }
     }
     
+    private func handleSelection(for symbol : String,searchResult :SearchResult) {
+        
+        showLoadingAnimation()
+        apiService.fetchTimeSeriesMonthlyAdjustedPublisher(keywords: symbol)
+            .sink { [weak self] completion in
+                self?.hideLoadingAnimation()
+                switch completion {
+                case .finished:
+                    break
+                case .failure(let error):
+                    print(error)
+                }
+            } receiveValue: { timeSeriesMonthlyAdjusted in
+                self.hideLoadingAnimation()
+                let asset = Asset(searchResult: searchResult, timeSeriesMonthlyAdjusted: timeSeriesMonthlyAdjusted)
+                self.performSegue(withIdentifier: "showCalculator", sender: asset)
+                print("success \(timeSeriesMonthlyAdjusted.getMonthInfos())")
+            }.store(in: &subscriber)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showCalculator",
+           let destisnation = segue.destination as? CalculatorTableViewController,
+           let asset = sender as? Asset {
+            
+            destisnation.asset = asset
+            
+        }
+    }
 }
 
 extension SearchTableViewController : UISearchResultsUpdating , UISearchControllerDelegate{
