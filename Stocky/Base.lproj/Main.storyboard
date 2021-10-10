@@ -95,7 +95,7 @@
         <scene sceneID="5bl-1b-ABw">
             <objects>
                 <tableViewController id="Unl-DV-dDP" customClass="CalculatorTableViewController" customModule="Stocky" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="nyM-mR-zmn">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="nyM-mR-zmn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -154,12 +154,21 @@
                                                                 </stackView>
                                                             </subviews>
                                                         </stackView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q50-TM-5eL">
+                                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="BNi-Cc-xxP">
                                                             <rect key="frame" x="0.0" y="44" width="382" height="20"/>
-                                                            <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="24"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q50-TM-5eL">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="59" height="20"/>
+                                                                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="24"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c9l-c3-8YR">
+                                                                    <rect key="frame" x="75" y="0.0" width="307" height="20"/>
+                                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                </view>
+                                                            </subviews>
+                                                        </stackView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="xsC-2S-G9S">
                                                             <rect key="frame" x="0.0" y="68" width="382" height="14"/>
                                                             <subviews>
@@ -279,8 +288,9 @@
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="36" id="qXY-im-gUN"/>
                                                                     </constraints>
+                                                                    <color key="textColor" systemColor="systemBlueColor"/>
                                                                     <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
-                                                                    <textInputTraits key="textInputTraits"/>
+                                                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                                 </textField>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="o9L-z3-nAC">
                                                                     <rect key="frame" x="0.0" y="32" width="382" height="14"/>
@@ -312,8 +322,9 @@
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="36" id="bFG-3m-egc"/>
                                                                     </constraints>
+                                                                    <color key="textColor" systemColor="systemBlueColor"/>
                                                                     <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
-                                                                    <textInputTraits key="textInputTraits"/>
+                                                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                                 </textField>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="vkq-Qh-1af">
                                                                     <rect key="frame" x="0.0" y="32" width="382" height="14"/>
@@ -345,6 +356,7 @@
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="36" id="RSL-JB-m3S"/>
                                                                     </constraints>
+                                                                    <color key="textColor" systemColor="systemBlueColor"/>
                                                                     <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
                                                                     <textInputTraits key="textInputTraits"/>
                                                                 </textField>
@@ -366,6 +378,9 @@
                                                         </stackView>
                                                         <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Rka-uL-2Uc">
                                                             <rect key="frame" x="-2" y="162" width="386" height="23"/>
+                                                            <connections>
+                                                                <action selector="dateSliderValueDidChange:" destination="Unl-DV-dDP" eventType="valueChanged" id="i5g-Ce-NKn"/>
+                                                            </connections>
                                                         </slider>
                                                     </subviews>
                                                 </stackView>
@@ -388,35 +403,73 @@
                     </tableView>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="tRd-No-9hL"/>
                     <connections>
+                        <outlet property="annualReturnLabel" destination="Xwm-oM-arO" id="HHk-ZI-sHK"/>
                         <outlet property="assetNameLabel" destination="heS-uh-47N" id="b2V-Dh-FVZ"/>
+                        <outlet property="currentValueLabel" destination="Q50-TM-5eL" id="5o1-tD-stB"/>
+                        <outlet property="dateSlider" destination="Rka-uL-2Uc" id="aZG-ak-gEa"/>
+                        <outlet property="gainLabel" destination="rPd-mB-A7R" id="XwJ-SS-4aR"/>
+                        <outlet property="initialDateOfInvestmentTextField" destination="qZ7-Tc-I5c" id="82e-ia-xNy"/>
+                        <outlet property="initialInvestmentAmountTextField" destination="Rza-tv-PgX" id="Jlb-Ct-Acy"/>
                         <outlet property="investmentAmountCurrLabel" destination="x8C-yI-z0U" id="65O-hr-4aY"/>
+                        <outlet property="investmentAmountLabel" destination="UyK-nf-RQn" id="7YM-2W-0J7"/>
+                        <outlet property="monthlyDollarCostAveragingTextField" destination="Qza-Wc-wxr" id="vp0-I3-d5d"/>
                         <outlet property="symbolLabel" destination="agz-hS-WeC" id="FOy-Cf-Sq1"/>
+                        <outlet property="yieldLabel" destination="Fx3-KY-nCf" id="vnV-rW-HXe"/>
                         <outletCollection property="currencyLabel" destination="ESm-qm-BIL" collectionClass="NSMutableArray" id="6XI-mz-qWu"/>
                         <outletCollection property="currencyLabel" destination="8hT-vG-foZ" collectionClass="NSMutableArray" id="d7s-TJ-omn"/>
                         <outletCollection property="currencyLabel" destination="0rT-d5-XLh" collectionClass="NSMutableArray" id="ydg-hD-TRG"/>
-                        <segue destination="TmI-Ga-wDv" kind="show" id="TPN-SV-Tde"/>
+                        <segue destination="TmI-Ga-wDv" kind="show" identifier="showDateSelection" id="TPN-SV-Tde"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Sw-Gc-p02" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1795.6521739130437" y="115.84821428571428"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Date Selection Table View Controller-->
         <scene sceneID="twJ-et-Wdp">
             <objects>
-                <tableViewController id="TmI-Ga-wDv" sceneMemberID="viewController">
+                <tableViewController id="TmI-Ga-wDv" customClass="DateSelectionTableViewController" customModule="Stocky" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="MZY-VH-fsT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Gzl-zr-2Vq">
-                                <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="checkmark" indentationWidth="10" reuseIdentifier="cellID" rowHeight="64" id="Gzl-zr-2Vq" customClass="DateSelectionTableViewCell" customModule="Stocky" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="64"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Gzl-zr-2Vq" id="vta-9l-0NW">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="373.5" height="64"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="QT0-fV-FJA">
+                                            <rect key="frame" x="16" y="8" width="341.5" height="48"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="December 2020" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ial-dg-mu9">
+                                                    <rect key="frame" x="0.0" y="0.0" width="341.5" height="29"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recent" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="17w-gL-u9y">
+                                                    <rect key="frame" x="0.0" y="29" width="341.5" height="19"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="12"/>
+                                                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="QT0-fV-FJA" firstAttribute="leading" secondItem="vta-9l-0NW" secondAttribute="leading" constant="16" id="cla-PR-fFj"/>
+                                        <constraint firstItem="QT0-fV-FJA" firstAttribute="top" secondItem="vta-9l-0NW" secondAttribute="top" constant="8" id="enO-t5-d4q"/>
+                                        <constraint firstAttribute="bottom" secondItem="QT0-fV-FJA" secondAttribute="bottom" constant="8" id="po5-Iz-Yn9"/>
+                                        <constraint firstAttribute="trailing" secondItem="QT0-fV-FJA" secondAttribute="trailing" constant="16" id="tjG-5Y-HQ2"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="monthLabel" destination="Ial-dg-mu9" id="EgB-QX-TZS"/>
+                                    <outlet property="monthsAgoLabel" destination="17w-gL-u9y" id="5f2-zD-LNW"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -428,7 +481,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DYJ-rf-Vca" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2626" y="116"/>
+            <point key="canvasLocation" x="2624.6376811594205" y="115.84821428571428"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="6lH-fJ-u3N">
@@ -452,6 +505,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

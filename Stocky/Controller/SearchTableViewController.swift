@@ -98,9 +98,14 @@ class SearchTableViewController: UITableViewController ,UIAnimator  {
                 print(searchResults)
                 self.searchResults = searchResults
                 self.tableView.reloadData()
+                self.tableView.isScrollEnabled = true
             }
             .store(in: &subscriber)
 
+    }
+    
+    private func setupTableView(){
+        tableView.isScrollEnabled = false
     }
     
     
@@ -125,6 +130,7 @@ class SearchTableViewController: UITableViewController ,UIAnimator  {
             let searchRes = searchResults.items[indexPath.item]
             handleSelection(for: symbol,searchResult: searchRes)
         }
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
     private func handleSelection(for symbol : String,searchResult :SearchResult) {
@@ -143,7 +149,7 @@ class SearchTableViewController: UITableViewController ,UIAnimator  {
                 self.hideLoadingAnimation()
                 let asset = Asset(searchResult: searchResult, timeSeriesMonthlyAdjusted: timeSeriesMonthlyAdjusted)
                 self.performSegue(withIdentifier: "showCalculator", sender: asset)
-                print("success \(timeSeriesMonthlyAdjusted.getMonthInfos())")
+                self.searchControlller.searchBar.text = nil
             }.store(in: &subscriber)
     }
     

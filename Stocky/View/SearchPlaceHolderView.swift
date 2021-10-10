@@ -9,7 +9,7 @@ import UIKit
 
 class SearchPlaceHolderView : UIView {
     private let imageView : UIImageView = {
-        let image = UIImage(named: "imDca")
+        let image = UIImage(named: "imLaunch")
         let imageView = UIImageView()
         imageView.image = image
         imageView.contentMode = .scaleAspectFit
@@ -47,7 +47,7 @@ class SearchPlaceHolderView : UIView {
             stackView.widthAnchor.constraint(lessThanOrEqualTo: widthAnchor, multiplier: 0.8),
             stackView.centerYAnchor.constraint(equalTo: centerYAnchor),
             stackView.centerXAnchor.constraint(equalTo: centerXAnchor),
-            imageView.heightAnchor.constraint(equalToConstant: 88)
+            imageView.heightAnchor.constraint(equalToConstant: 160)
         
         ])
     }

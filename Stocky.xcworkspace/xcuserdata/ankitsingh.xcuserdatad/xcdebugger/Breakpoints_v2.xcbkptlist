@@ -39,16 +39,310 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "FC8BD6B5-605F-4F03-BEC2-18775A36AD15"
+            uuid = "89A790B9-BCBF-428D-AE65-3BC40272C584"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Stocky/Controller/CalculatorTableViewController.swift"
+            filePath = "Stocky/Controller/DateSelectionTableViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "23"
-            endingLineNumber = "23"
-            landmarkName = "viewDidLoad()"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "DateSelectionTableViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "89A790B9-BCBF-428D-AE65-3BC40272C584 - 511e566d67ce3391"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Stocky.DateSelectionTableViewController.timeSeriesMonthlyAdjusted.getter : Swift.Optional&lt;Stocky.TimeSeriesMonthlyAdjusted&gt;"
+                  moduleName = "Stocky"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ankitsingh/Desktop/IOS%20Dev%20projs/Stocky%20FinancialStocksApp/Stocky/Stocky/Controller/DateSelectionTableViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "116">
+               </Location>
+               <Location
+                  uuid = "89A790B9-BCBF-428D-AE65-3BC40272C584 - a465a616bf680b9d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Stocky.DateSelectionTableViewController.timeSeriesMonthlyAdjusted.setter : Swift.Optional&lt;Stocky.TimeSeriesMonthlyAdjusted&gt;"
+                  moduleName = "Stocky"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ankitsingh/Desktop/IOS%20Dev%20projs/Stocky%20FinancialStocksApp/Stocky/Stocky/Controller/DateSelectionTableViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "175">
+               </Location>
+               <Location
+                  uuid = "89A790B9-BCBF-428D-AE65-3BC40272C584 - e67301a89423a3db"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Stocky.DateSelectionTableViewController.timeSeriesMonthlyAdjusted.modify : Swift.Optional&lt;Stocky.TimeSeriesMonthlyAdjusted&gt;"
+                  moduleName = "Stocky"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ankitsingh/Desktop/IOS%20Dev%20projs/Stocky%20FinancialStocksApp/Stocky/Stocky/Controller/DateSelectionTableViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "27">
+               </Location>
+               <Location
+                  uuid = "89A790B9-BCBF-428D-AE65-3BC40272C584 - b9db2337d7a37e69"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Stocky.DateSelectionTableViewController.timeSeriesMonthlyAdjusted.modify : Swift.Optional&lt;Stocky.TimeSeriesMonthlyAdjusted&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "Stocky"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ankitsingh/Desktop/IOS%20Dev%20projs/Stocky%20FinancialStocksApp/Stocky/Stocky/Controller/DateSelectionTableViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "15">
+               </Location>
+               <Location
+                  uuid = "89A790B9-BCBF-428D-AE65-3BC40272C584 - 4457fdbec7b61aaa"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Stocky.DateSelectionTableViewController.init(style: __C.UITableViewStyle) -&gt; Stocky.DateSelectionTableViewController"
+                  moduleName = "Stocky"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ankitsingh/Desktop/IOS%20Dev%20projs/Stocky%20FinancialStocksApp/Stocky/Stocky/Controller/DateSelectionTableViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "74">
+               </Location>
+               <Location
+                  uuid = "89A790B9-BCBF-428D-AE65-3BC40272C584 - acb0a8d76dc926c4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Stocky.DateSelectionTableViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; Stocky.DateSelectionTableViewController"
+                  moduleName = "Stocky"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ankitsingh/Desktop/IOS%20Dev%20projs/Stocky%20FinancialStocksApp/Stocky/Stocky/Controller/DateSelectionTableViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "127">
+               </Location>
+               <Location
+                  uuid = "89A790B9-BCBF-428D-AE65-3BC40272C584 - a422d71d5f97f959"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Stocky.DateSelectionTableViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;Stocky.DateSelectionTableViewController&gt;"
+                  moduleName = "Stocky"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ankitsingh/Desktop/IOS%20Dev%20projs/Stocky%20FinancialStocksApp/Stocky/Stocky/Controller/DateSelectionTableViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "84">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "93E4CC6E-ED32-41B0-B77C-D2A9C5B65DC5"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Stocky/Controller/DateSelectionTableViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "DateSelectionTableViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "93E4CC6E-ED32-41B0-B77C-D2A9C5B65DC5 - 21a8148c536e5a41"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Stocky.DateSelectionTableViewController.monthInfos.getter : Swift.Array&lt;Stocky.MonthInfo&gt;"
+                  moduleName = "Stocky"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ankitsingh/Desktop/IOS%20Dev%20projs/Stocky%20FinancialStocksApp/Stocky/Stocky/Controller/DateSelectionTableViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "90">
+               </Location>
+               <Location
+                  uuid = "93E4CC6E-ED32-41B0-B77C-D2A9C5B65DC5 - 89aac77022259e55"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Stocky.DateSelectionTableViewController.monthInfos.setter : Swift.Array&lt;Stocky.MonthInfo&gt;"
+                  moduleName = "Stocky"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ankitsingh/Desktop/IOS%20Dev%20projs/Stocky%20FinancialStocksApp/Stocky/Stocky/Controller/DateSelectionTableViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "116">
+               </Location>
+               <Location
+                  uuid = "93E4CC6E-ED32-41B0-B77C-D2A9C5B65DC5 - ca69388998dafb55"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Stocky.DateSelectionTableViewController.monthInfos.modify : Swift.Array&lt;Stocky.MonthInfo&gt;"
+                  moduleName = "Stocky"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ankitsingh/Desktop/IOS%20Dev%20projs/Stocky%20FinancialStocksApp/Stocky/Stocky/Controller/DateSelectionTableViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "27">
+               </Location>
+               <Location
+                  uuid = "93E4CC6E-ED32-41B0-B77C-D2A9C5B65DC5 - 20eb893a3e0628eb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Stocky.DateSelectionTableViewController.monthInfos.modify : Swift.Array&lt;Stocky.MonthInfo&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "Stocky"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ankitsingh/Desktop/IOS%20Dev%20projs/Stocky%20FinancialStocksApp/Stocky/Stocky/Controller/DateSelectionTableViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "15">
+               </Location>
+               <Location
+                  uuid = "93E4CC6E-ED32-41B0-B77C-D2A9C5B65DC5 - 4457fdbec7b61aec"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Stocky.DateSelectionTableViewController.init(style: __C.UITableViewStyle) -&gt; Stocky.DateSelectionTableViewController"
+                  moduleName = "Stocky"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ankitsingh/Desktop/IOS%20Dev%20projs/Stocky%20FinancialStocksApp/Stocky/Stocky/Controller/DateSelectionTableViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "120">
+               </Location>
+               <Location
+                  uuid = "93E4CC6E-ED32-41B0-B77C-D2A9C5B65DC5 - acb0a8d76dc92682"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Stocky.DateSelectionTableViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; Stocky.DateSelectionTableViewController"
+                  moduleName = "Stocky"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ankitsingh/Desktop/IOS%20Dev%20projs/Stocky%20FinancialStocksApp/Stocky/Stocky/Controller/DateSelectionTableViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "170">
+               </Location>
+               <Location
+                  uuid = "93E4CC6E-ED32-41B0-B77C-D2A9C5B65DC5 - a422d71d5f97f91f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Stocky.DateSelectionTableViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;Stocky.DateSelectionTableViewController&gt;"
+                  moduleName = "Stocky"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ankitsingh/Desktop/IOS%20Dev%20projs/Stocky%20FinancialStocksApp/Stocky/Stocky/Controller/DateSelectionTableViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "127">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9BE06932-6E41-42DD-A42F-74100A66B3D8"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Stocky/Controller/DateSelectionTableViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1A63CCE0-6D22-4CC8-BF83-D93224ED4F83"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Stocky/Controller/DateSelectionTableViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D3672E9F-3BBF-49B0-A887-088718895C39"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Stocky/Controller/DateSelectionTableViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
+            landmarkName = "configure(with:index:isSelected:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3F8464F6-4E2A-4551-B8DC-1ED8B5F5675E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Stocky/Controller/DateSelectionTableViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "tableView(_:didSelectRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
