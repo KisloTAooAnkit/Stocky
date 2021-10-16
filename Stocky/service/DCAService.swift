@@ -10,6 +10,11 @@ import Foundation
 struct DCAService {
     
     
+    func performSubtraction(x : Int, y : Int)->Int {
+        return x-y
+    }
+    
+    
     func calculate(
         asset : Asset,
         initialInvestmentAmount : Double,
@@ -60,7 +65,7 @@ struct DCAService {
         
     }
     
-    private func getInvestmentAmount(initialInvestmentAmount : Double,monthlyDollarCostAveragingAmount : Double,initialDateOfInvestmentIndex : Int) -> Double{
+    func getInvestmentAmount(initialInvestmentAmount : Double,monthlyDollarCostAveragingAmount : Double,initialDateOfInvestmentIndex : Int) -> Double{
         
         var totalAmount = Double()
         

@@ -27,11 +27,22 @@
 		14754390270EF4D900DF3119 /* DateSelectionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1475438F270EF4D900DF3119 /* DateSelectionTableViewController.swift */; };
 		14754392270EFB3F00DF3119 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14754391270EFB3F00DF3119 /* DateExtension.swift */; };
 		14754394270F0E0A00DF3119 /* IntExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14754393270F0E0A00DF3119 /* IntExtensions.swift */; };
+		14978E862714538A00FEFEAF /* StockyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14978E852714538A00FEFEAF /* StockyTests.swift */; };
 		14CA28112707071000BA9050 /* SearchPlaceHolderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CA28102707071000BA9050 /* SearchPlaceHolderView.swift */; };
 		14CA281427070D9400BA9050 /* UIAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CA281327070D9400BA9050 /* UIAnimator.swift */; };
 		14DB9958270B09EC00C293B9 /* TimeSeriesMonthlyAdjusted.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DB9957270B09EC00C293B9 /* TimeSeriesMonthlyAdjusted.swift */; };
 		B650442261E32D32ABF5F128 /* Pods_Stocky.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BD7BD720BBF2D066A83F568 /* Pods_Stocky.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		14978E872714538A00FEFEAF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 140C025E2702E68700F7C025 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 140C02652702E68700F7C025;
+			remoteInfo = Stocky;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		140C02662702E68700F7C025 /* Stocky.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stocky.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -56,6 +67,8 @@
 		1475438F270EF4D900DF3119 /* DateSelectionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSelectionTableViewController.swift; sourceTree = "<group>"; };
 		14754391270EFB3F00DF3119 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		14754393270F0E0A00DF3119 /* IntExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntExtensions.swift; sourceTree = "<group>"; };
+		14978E832714538A00FEFEAF /* StockyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StockyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		14978E852714538A00FEFEAF /* StockyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockyTests.swift; sourceTree = "<group>"; };
 		14CA28102707071000BA9050 /* SearchPlaceHolderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPlaceHolderView.swift; sourceTree = "<group>"; };
 		14CA281327070D9400BA9050 /* UIAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAnimator.swift; sourceTree = "<group>"; };
 		14DB9957270B09EC00C293B9 /* TimeSeriesMonthlyAdjusted.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeSeriesMonthlyAdjusted.swift; sourceTree = "<group>"; };
@@ -73,6 +86,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		14978E802714538A00FEFEAF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -80,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				140C02682702E68700F7C025 /* Stocky */,
+				14978E842714538A00FEFEAF /* StockyTests */,
 				140C02672702E68700F7C025 /* Products */,
 				CEDF234611CF4072756CE71C /* Pods */,
 				C7B41550A338B39FA7643350 /* Frameworks */,
@@ -90,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				140C02662702E68700F7C025 /* Stocky.app */,
+				14978E832714538A00FEFEAF /* StockyTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -173,6 +195,14 @@
 			path = Extentions;
 			sourceTree = "<group>";
 		};
+		14978E842714538A00FEFEAF /* StockyTests */ = {
+			isa = PBXGroup;
+			children = (
+				14978E852714538A00FEFEAF /* StockyTests.swift */,
+			);
+			path = StockyTests;
+			sourceTree = "<group>";
+		};
 		14CA281227070D8000BA9050 /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
@@ -220,6 +250,24 @@
 			productReference = 140C02662702E68700F7C025 /* Stocky.app */;
 			productType = "com.apple.product-type.application";
 		};
+		14978E822714538A00FEFEAF /* StockyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 14978E8B2714538A00FEFEAF /* Build configuration list for PBXNativeTarget "StockyTests" */;
+			buildPhases = (
+				14978E7F2714538A00FEFEAF /* Sources */,
+				14978E802714538A00FEFEAF /* Frameworks */,
+				14978E812714538A00FEFEAF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				14978E882714538A00FEFEAF /* PBXTargetDependency */,
+			);
+			name = StockyTests;
+			productName = StockyTests;
+			productReference = 14978E832714538A00FEFEAF /* StockyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -232,6 +280,10 @@
 				TargetAttributes = {
 					140C02652702E68700F7C025 = {
 						CreatedOnToolsVersion = 13.0;
+					};
+					14978E822714538A00FEFEAF = {
+						CreatedOnToolsVersion = 13.0;
+						TestTargetID = 140C02652702E68700F7C025;
 					};
 				};
 			};
@@ -249,6 +301,7 @@
 			projectRoot = "";
 			targets = (
 				140C02652702E68700F7C025 /* Stocky */,
+				14978E822714538A00FEFEAF /* StockyTests */,
 			);
 		};
 /* End PBXProject section */
@@ -261,6 +314,13 @@
 				140C02762702E68800F7C025 /* LaunchScreen.storyboard in Resources */,
 				140C02732702E68800F7C025 /* Assets.xcassets in Resources */,
 				140C02712702E68700F7C025 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14978E812714538A00FEFEAF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,7 +396,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		14978E7F2714538A00FEFEAF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14978E862714538A00FEFEAF /* StockyTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		14978E882714538A00FEFEAF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 140C02652702E68700F7C025 /* Stocky */;
+			targetProxy = 14978E872714538A00FEFEAF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		140C026F2702E68700F7C025 /* Main.storyboard */ = {
@@ -532,6 +608,52 @@
 			};
 			name = Release;
 		};
+		14978E892714538A00FEFEAF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SSLV33PB85;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ankit.StockyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Stocky.app/Stocky";
+			};
+			name = Debug;
+		};
+		14978E8A2714538A00FEFEAF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SSLV33PB85;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ankit.StockyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Stocky.app/Stocky";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -549,6 +671,15 @@
 			buildConfigurations = (
 				140C027B2702E68800F7C025 /* Debug */,
 				140C027C2702E68800F7C025 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		14978E8B2714538A00FEFEAF /* Build configuration list for PBXNativeTarget "StockyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14978E892714538A00FEFEAF /* Debug */,
+				14978E8A2714538A00FEFEAF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
