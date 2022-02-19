@@ -1,7 +1,7 @@
 
 # Stocky
 
-Build a dollar cost averaging calculator to project potential returns for financial assets like stocks, equities & ETFs
+A dollar cost averaging calculator to project potential returns for financial assets like stocks, equities & ETFs
 
 ## App Premise:
 
