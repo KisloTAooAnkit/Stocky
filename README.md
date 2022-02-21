@@ -18,3 +18,8 @@ A dollar cost averaging calculator to project potential returns for financial as
 - Basics of reactive programming using combine framework
 - Programmatic + Storyboard UI dev
 - Basics of Unit Testing 
+
+## Application Demo
+![Slider](https://user-images.githubusercontent.com/40890260/154921354-a6020f40-83ee-4461-967b-d0ca3879dc4a.gif)
+![Data Filling](https://user-images.githubusercontent.com/40890260/154921369-185da47a-8a32-4306-9cd8-7e6ab5f27ed3.gif)
+![Searching](https://user-images.githubusercontent.com/40890260/154921376-87d9ca2c-87f3-491e-aed8-b78771683a92.gif)
