@@ -9,7 +9,7 @@ A dollar cost averaging calculator to project potential returns for financial as
 - Uses alphavantage API to retrieve stocks data of various organisation.
 - Allows user to get rough estimates of future stock pricing 
 - The user is able to save favorite stocks. This persists between app launches.
-- Added basic Unit test to verify the results of services 
+- Added Unit tests to verify the results of services layers
 
 
 ## Key Learnings 
